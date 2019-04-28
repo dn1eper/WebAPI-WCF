@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Employees</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" type="text/css" />
+    
+</head>
+<body>
+    <div class="container">
+        <h2>All Employees</h2>
+        <div class="emp_all"></div>
+        <input type="button" value="GO" onclick="getEmployees()" />
+    </div>
+
+    <div class="container">
+        <h2>Employee by ID</h2>
+        <div class="emp_by_id"></div>
+        <input type="number" id="emp_id" name="number" required minlength="4">
+        <input type="button" value="GO" onclick="getEmployeeById()" />
+    </div>
+
+    <div class="container">
+        <h2>Employee by name</h2>
+        <div class="emp_by_name">
+        </div>
+        <input type="text" id="emp_name" required minlength="4">
+        <input type="button" value="GO" onclick="getEmployeeByName()" />
+    </div>
+
+    <div class="container">
+        <h2>New employee</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>
+                    <input type="text" id="emp_first_name" required minlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name </label>
+                </td>
+                <td>
+                    <input type="text" id="emp_last_name" required minlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Department</label>
+                </td>
+                <td>
+                    <input type="text" id="emp_department" required minlength="4">
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Save" onclick="saveEmployee()" />
+    </div>
+    <div class="container">
+        <h2>Change employee</h2>
+        <table>
+            <tr>
+                <td>
+                    <label>ID</label>
+                </td>
+                <td>
+                    <input type="number" id="emp_id_c" required minlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>First Name</label>
+                </td>
+                <td>
+                    <input type="text" id="emp_first_name_c" required minlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Last Name </label>
+                </td>
+                <td>
+                    <input type="text" id="emp_last_name_c" required minlength="4">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Department</label>
+                </td>
+                <td>
+                    <input type="text" id="emp_department_c" required minlength="4">
+                </td>
+            </tr>
+        </table>
+        <input type="button" value="Change" onclick="changeEmployee()" />
+    </div>
+    <div class="container">
+        <h2>Delete employee</h2>
+        <input type="number" id="emp_delete_id" required minlength="4">
+        <input type="button" value="Delete!" onclick="deleteEmployee()" />
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/main.js"></script>
+</body>
+</html>
